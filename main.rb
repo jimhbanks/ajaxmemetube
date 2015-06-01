@@ -3,7 +3,6 @@ require 'sinatra/contrib/all' if development?
 require 'pry'
 require 'pg'
 
-
 get '/' do   
   redirect to ("/videos")
 end
@@ -48,8 +47,6 @@ get "/videos/:id" do
   end
 end
 
-
-
 # get "/videos/:id/delete" do
 #   sql = "DELETE FROM videos where id=#{params[:id]}"
 #   run_sql(sql)
@@ -65,11 +62,6 @@ end
 #     redirect_to '/videos'
 #   end
 # end
-
-
-
-
-
 
 def sql_string(value)
   "'#{value.gsub("'", "''")}'"  
