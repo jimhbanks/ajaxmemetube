@@ -11,7 +11,7 @@ get "/videos" do
   sql =  "select * from videos"
   @videos = run_sql(sql)
   if request.xhr?
-    json @videos.to_a
+    json @video
   else
     erb :index
   end
