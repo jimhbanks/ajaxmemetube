@@ -3,7 +3,7 @@ function appendNewItem(data){
     '<input type="checkbox" data-id="'+ data.id +'" '+ (data.done == 't' ? 'checked="checked"' : "") + '>'+
     '<label>'+ data.title +'</label>'+
     '<button class="destroy" data-id="'+ data.id +'"></button>'+
-    '</li>').prependTo("#todo-list")
+    '</li>').prependTo("#todo-list");
 }
 
 function getVideo(){
@@ -15,9 +15,9 @@ function getVideo(){
     }).done(function(data){
       $.each(data, function(index, item){
       appendNewItem(item);
-   })
-  )
- })
+   });
+  );
+ });
 }
 
 
@@ -33,9 +33,8 @@ function createVideo(){
     dataType: 'json'
    }).done(function(data){
     appendNewItem;
- })
+ });
 }
-
 
 
 
